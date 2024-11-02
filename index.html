@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+</head>
+
+<body>
+    <div class="ring">Loading
+        <span></span>
+    </div>
+
+    <body>
+        <!-- Your existing HTML content -->
+
+        <script>
+            // Hide the loading animation when the page has loaded
+            window.addEventListener('load', function () {
+                document.querySelector('.ring').style.display = 'none';
+            });
+        </script>
+
+
+
+
+
+        <div id="main-content">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#8942;</label>
+            <div class="navbar-container">
+                <div class="navbar">
+                    <a href="#about" class="menu-link">About</a>
+                    <a href="#cv1" class="menu-link">CV</a>
+                    <a href="#services" class="menu-link">Services</a>
+                    <a href="#skills1" class="menu-link">Skills</a>
+                    <a href="#software" class="menu-link">Proficiency</a>
+                    <a href="#contact" class="menu-link">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Close the menu when any menu option is clicked
+            document.querySelectorAll('.menu-link').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    var checkbox = document.getElementById('menu-toggle');
+                    checkbox.checked = false; // Uncheck the checkbox to close the menu
+                });
+            });
+        </script>
+
+
+
+
+        <section id="mainimg">
+            <video id="responsiveVideo" src="image_vids\Art is not What (1).mp4" autoplay loop muted></video>
+        </section>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <section id="cv1">
+            <h1><br></h1>
+            <h1 data-aos="fade-up" data-aos-duration="2500">Curriculum Vitae</h1>
+            <div class="container" id="content-container">
+                <ol class="horizontal-list">
+                    <li>
+                        <img data-aos="fade-right" data-aos-duration="2000" src="image_vids\cv1.png" alt="desc">
+                    </li>
+                    <li>
+                        <img data-aos="fade-right" data-aos-duration="2000" src="image_vids\cv2(1).png" alt="desc">
+                    </li>
+                    <li>
+                        <img data-aos="fade-right" data-aos-duration="2000" src="image_vids\cv3.png" alt="desc">
+                    </li>
+                    <li>
+                        <img data-aos="fade-right" data-aos-duration="2000" src="image_vids\c4.png" alt="desc">
+                    </li>
+                    <li>
+                        <img data-aos="fade-right" data-aos-duration="2000" src="image_vids\c5.png" alt="desc">
+                    </li>
+                    <li>
+                        <img data-aos="fade-right" data-aos-duration="2000" src="image_vids\cv6.png" alt="desc">
+                    </li>
+                </ol>
+            </div>
+
+
+
+        </section>
+
+
+
+
+
+        <section id="services">
+
+
+            <h1 data-aos="fade-up" data-aos-duration="1000">Services</h1>
+            <div class="s-list">
+                <div class="s-item">
+                    <h2 data-aos="fade-up" data-aos-duration="1000">VIDEO SERVICES</h2>
+                    <ul>
+
+                        <li class="service-item">
+                            <div class="service-content">
+                                <div data-aos="fade-up" data-aos-duration="2000">
+                                    <p data-aos="zoom-in">Content Videos</p>
+                                    <video src="image_vids\serv3(1).mp4" autoplay loop muted></video>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-content">
+                                <div data-aos="fade-down" data-aos-duration="2000">
+                                    <p data-aos="zoom-in">EFX Videos</p>
+                                    <video src="image_vids\serv2(1).mp4" autoplay loop muted></video>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-content">
+                                <div data-aos="fade-up" data-aos-duration="2000">
+                                    <p data-aos="zoom-in">Text-Animation Videos</p>
+                                    <video src="image_vids\serv4(1).mp4" autoplay loop muted></video>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-content">
+                                <div data-aos="fade-down" data-aos-duration="2000">
+                                    <p data-aos="zoom-in">Add On</p>
+                                    <video src="image_vids\serv1(1).mp4" autoplay loop muted></video>
+
+
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h2 data-aos="fade-up" data-aos-duration="1000">PHOTO SERVICES</h2>
+                    <ul>
+                        <li class="service-item">
+                            <div class="service-content" data-aos="fade-down" data-aos-duration="3000">
+                                <p data-aos="zoom-in">Portraits</p>
+                                <img src="image_vids\servph1(1).png" alt="desc">
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-content" data-aos="fade-up" data-aos-duration="3000">
+                                <p data-aos="zoom-in">Nature Photography</p>
+
+
+                                <img src="image_vids\servph2.png" alt="desc">
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-content" data-aos="fade-down" data-aos-duration="3000">
+                                <p data-aos="zoom-in">Model Photography</p>
+                                <img src="image_vids\servph3(1).png" alt="desc">
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-content" data-aos="fade-up" data-aos-duration="3000">
+                                <p data-aos="zoom-in">Add On</p>
+                                <img src="image_vids\servph4.png" alt="desc">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="servb"></div>
+        </section>
+
+
+
+        <div id="pg">
+
+
+            <div class="container01">
+                <h1>MY SKILLS</h1>
+                <div class="gallery-wrap">
+                    <div class="item item-1">
+                        <img src="image_vids\myskills2.png" alt="Skill 1">
+                        <div class="text-box">
+                            <p>GRAPHIC DESIGNS</p>
+                            <a href="page1.html" class="btn">View</a>
+                        </div>
+                    </div>
+                    <div class="item item-2">
+                        <img src="image_vids\myskills1.png" alt="Skill 2">
+                        <div class="text-box">
+                            <p>SNAPSHOTS</p>
+                            <a href="page2.html" class="btn">View</a>
+                        </div>
+                    </div>
+                    <div class="item item-3">
+                        <img src="image_vids\myskills4.png" alt="Skill 3">
+                        <div class="text-box">
+                            <p>HIGHLIGHTS</p>
+                            <a href="page3.html" class="btn">View</a>
+                        </div>
+                    </div>
+                    <div class="item item-4">
+                        <img src="image_vids\myskills3.png" alt="Skill 4">
+                        <div class="text-box">
+                            <p>TEXT ANIMATIONS</p>
+
+                            <a href="page4.html" class="btn">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const items = document.querySelectorAll('.gallery-wrap .item');
+
+                items.forEach(item => {
+                    item.addEventListener('mouseenter', () => {
+                        items.forEach(i => i.classList.remove('expanded')); // Remove 'expanded' class from all items
+                        item.classList.add('expanded'); // Add 'expanded' class to the hovered item
+                    });
+                });
+            });
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section id="software">
+            <h2 data-aos="fade-up" data-aos-duration="1000">Software Proficiency</h2>
+            <div class="software-list">
+                <div data-aos="zoom-in-right" data-aos-duration="1000" class="software-item" id="Alight">
+                    <h1>Adobe Premiere Pro</h1>
+                    <strong>Video Editing</strong>
+                    <img class="scroll-img" src="image_vids\A1(1).png" alt="Alight Motion">
+                </div>
+                <div data-aos="zoom-in" data-aos-duration="1000" class="software-item" id="Capcut">
+                    <h1>Adobe Lightroom</h1>
+                    <strong>Photo Editing</strong>
+                    <img class="scroll-img" src="image_vids\A2(1)(1).png" alt="CapCut">
+                </div>
+                <div data-aos="zoom-in-left" data-aos-duration="1000" class="software-item" id="Lightroom">
+                    <h1>Alight Motion<h1>
+                            <strong>Colour Grading</strong>
+                            <img class="scroll-img" src="image_vids\A3(1).png" alt="Adobe Lightroom">
+                </div>
+                <div data-aos="zoom-in-right" data-aos-duration="1000" class="software-item" id="AdobeP">
+                    <h1>Adobe After Effects</h1>
+                    <strong>Visual Effects & Motion Graphics</strong>
+                    <img class="scroll-img" src="image_vids\A4(1)(1).png" alt="Adobe Premiere Pro">
+                </div>
+                <div data-aos="zoom-in" data-aos-duration="1000" class="software-item" id="AdobeE">
+                    <h1>CapCut</h1>
+                    <strong>Visual Editing</strong>
+                    <img class="scroll-img" src="image_vids\A5(1).png" alt="Adobe After Effects">
+                </div>
+                <div data-aos="zoom-in-left" data-aos-duration="1000" class="software-item" id="AdobeXD">
+                    <h1>Proficiency Overview</h1>
+                    <strong> <br></strong>
+                    <img class="scroll-img" src="image_vids\A6(1).png" alt="Adobe XD">
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div id="contact">
+                <h1>CONTACT</h1>
+                <div class="link-logos">
+                    <i class="fa-regular fa-envelope "></i>
+                    <i class="fa-brands fa-instagram "></i>
+                    <i class="fa-brands fa-linkedin "></i>
+                    <i class="fa-brands fa-github "></i>
+                </div>
+                <ul class="links">
+                    <li>
+                        <a class="linkstyle" href="mailto:abve811@gmail.com">Email</a>
+                    </li>
+                    <li>
+                        <a class="linkstyle"
+                            href="https://www.instagram.com/abve.efx?igsh=ZzVtdnBoY21vZ2Jt">Instagram</a>
+                    </li>
+                    <li>
+                        <a class="linkstyle"
+                            href="https://www.linkedin.com/in/abhijith-venugopal-6b27802a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Linkedin</a>
+                    </li>
+                    <li>
+                        <a class="linkstyle" href="https://github.com/abve158">Github</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                AOS.init();
+
+                // Log messages to ensure script runs
+                console.log("DOM fully loaded and parsed");
+
+                // Hide the loading page and show the main content
+                document.getElementById('loading-page').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            });
+        </script>
+
+
+        <script>
+            function changeVideoSrc() {
+                var videoElement = document.getElementById('responsiveVideo');
+                if (window.innerWidth <= 500) {
+                    videoElement.src = 'image_vids/phonemain.mp4';
+                    console.log("Switched to phonemain.mp4");
+                } else {
+                    videoElement.src = 'image_vids/Art is not What (1).mp4';
+                    console.log("Switched to Art is not What (1).mp4");
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                changeVideoSrc(); // Run on load
+                window.addEventListener('resize', changeVideoSrc); // Run on resize
+            });
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    </body>
+
+
+
+</html>

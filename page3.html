@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Image with Text Overlay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gradient: linear-gradient(90deg, #ee6352, #08b2e3, #57d7a8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes neonGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(90deg, #0f000c, #141427, #00ffcc, #141427, #0f000c);
+            background-size: 300% 300%;
+            animation: neonGradient 8s ease-in-out infinite;
+            /* Removed padding from body and html */
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            /* Ensures the image is flush with the top */
+            padding: 0;
+            overflow: hidden;
+            top: 0;
+            /* Positions the container at the top of the page */
+        }
+
+
+        .big-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Overlay container */
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            /* Semi-transparent black */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .overlay-text {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1;
+            text-transform: uppercase;
+            background-image: var(--gradient);
+            background-size: 300%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+            transition: background-position 1s ease-in-out;
+        }
+
+        /* Animation for gradient movement */
+        .overlay-text:hover {
+            background-position: 100%;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .overlay-text {
+                font-size: 2.5rem;
+                padding: 10px 0;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .overlay {
+                padding: 15px 0;
+            }
+
+            .overlay-text {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .overlay-text {
+                font-size: 1.5rem;
+            }
+        }
+
+
+        #services h1 {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #services .s-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #services .s-item h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #services .s-list .s-item ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            gap: 20px;
+            /* Adds spacing between items */
+        }
+
+        #services .s-list .s-item li.service-item {
+            flex: 0 1 30%;
+            /* Ensures 3 items per row */
+            max-width: 30%;
+            /* Limits each item to 30% of container */
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 10px;
+            flex-direction: column;
+        }
+
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            #services .s-list .s-item li.service-item {
+                flex: 1 1 45%;
+                /* Two items per row on smaller screens */
+                max-width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #services .s-list .s-item li.service-item {
+                flex: 1 1 80%;
+                /* Two items per row */
+                max-width: 80%;
+                margin: 5px;
+                /* Adjust margin for spacing */
+            }
+
+            /* Set every third item to full width */
+            #services .s-list .s-item li.service-item:nth-child(3n) {
+                flex: 1 1 100%;
+                /* Full width for every third item */
+                max-width: 100%;
+            }
+
+            /* Additional adjustments for heading sizes */
+            #services h1 {
+                font-size: 24px;
+            }
+
+            #services .s-item h2 {
+                font-size: 20px;
+            }
+        }
+
+
+
+        #services .s-list .s-item .service-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #services .s-list .s-item .service-content video {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            #services .s-list .s-item li.service-item {
+                flex-basis: 45%;
+                /* Each item takes about half of the row width */
+            }
+
+            #services h1 {
+                font-size: 36px;
+            }
+
+            #services .s-item h2 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            #services .s-list .s-item li.service-item {
+                flex: 1 1 45%;
+                /* Two items per row */
+                max-width: 45%;
+                margin: 5px;
+                /* Adjust margin for spacing */
+            }
+
+            /* Set every third item to full width */
+            #services .s-list .s-item li.service-item:nth-child(3n) {
+                flex: 1 1 60%;
+                /* Full width for every third item */
+                max-width: 60%;
+            }
+
+            /* Ensure the list is displayed as a flex container */
+            #services .s-list .s-item ul {
+                display: flex;
+                /* Use flexbox for layout */
+                flex-wrap: wrap;
+                /* Allow items to wrap */
+                justify-content: center;
+                /* Center the items */
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+            }
+
+            #services h1 {
+                font-size: 24px;
+                /* Adjust heading size */
+            }
+
+            #services .s-item h2 {
+                font-size: 20px;
+                /* Adjust subheading size */
+            }
+        }
+
+
+
+
+        #services h1 {
+            font-size: 24px;
+        }
+
+        #services .s-item h2 {
+            font-size: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            /* Use flexbox for alignment */
+            justify-content: center;
+            /* Center horizontally */
+            margin: 20px 0;
+            /* Optional: Add some margin for spacing */
+        }
+
+        .fun {
+            /* Existing styles */
+            color: white;
+            border: 0;
+            cursor: pointer;
+            padding: 0.5em 1.25em;
+            background: linear-gradient(90deg, #070707c6, #02bafd, #0e0e0ec6);
+            background-size: 300%;
+            background-position: left;
+            transition: background-position 350ms;
+            border-radius: 5px;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+
+        .fun i {
+            margin-right: 5px;
+        }
+
+        .fun:hover {
+            background-position: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <img src="image_vids/highlights/main.png" alt="Big Image" class="big-image">
+        <div class="overlay">
+            <div class="overlay-text">Highlights</div>
+        </div>
+    </div>
+
+    <section id="services">
+
+        <div class="s-list">
+            <div class="s-item">
+
+                <ul>
+                    <!-- First Row Videos -->
+                    <li class="service-item">
+                        <div class="service-content" data-aos="fade-up" data-aos-duration="2000">
+
+                            <video src="image_vids\highlights\highlightexpo\Untitled design (1).mp4" autoplay loop
+                                muted></video>
+                        </div>
+                    </li>
+                    <li class="service-item">
+                        <div class="service-content" data-aos="fade-down" data-aos-duration="2000">
+
+                            <video src="image_vids\highlights\highlightexpo\Untitled design (2).mp4" autoplay loop
+                                muted></video>
+                        </div>
+                    </li>
+                    <li class="service-item">
+                        <div class="service-content" data-aos="fade-up" data-aos-duration="2000">
+
+                            <video src="image_vids\highlights\highlightexpo\Untitled design.mp4" autoplay loop
+                                muted></video>
+                        </div>
+                    </li>
+
+                    <!-- Second Row Videos -->
+                    <li class="service-item">
+                        <div class="service-content" data-aos="fade-down" data-aos-duration="2000">
+                            <p data-aos="zoom-in"></p>
+                            <video src="image_vids\highlights\highlightexpo\Untitled design (4).mp4" autoplay loop
+                                muted></video>
+                        </div>
+                    </li>
+                    <li class="service-item">
+                        <div class="service-content" data-aos="fade-up" data-aos-duration="2000">
+                            <p data-aos="zoom-in"></p>
+                            <video src="image_vids\highlights\highlightexpo\Untitled design (5).mp4" autoplay loop
+                                muted></video>
+                        </div>
+                    </li>
+                    <li class="service-item">
+                        <div class="service-content" data-aos="fade-down" data-aos-duration="2000">
+                            <p data-aos="zoom-in"></p>
+                            <video src="image_vids\highlights\highlightexpo\Untitled design (3).mp4" autoplay loop
+                                muted></video>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="button-container">
+        <button class="fun" onclick="window.location.href='index.html#pg1'">
+            <i class="fas fa-home"></i> Home
+        </button>
+    </div>
+
+</body>
+
+</html>
